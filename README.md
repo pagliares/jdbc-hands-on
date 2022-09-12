@@ -13,5 +13,10 @@ MySQL credentials used in this course:
 
 The user florentino was granted all privileges a root user has. 
 
-The database hostelapp_jdbc and user florentino were created with aid of PHP Admin that comes bundled with MAMP.
+The database hostelapp_jdbc and user florentino were created with aid of PHP MyAdmin that comes bundled with MAMP.
 
+SQL script used to create and populate the tables in the MySQL database (See SQL_Scripts folder in this repository).
+   - SQL_Scripts/Hostel_App_SQL_Script.sql
+   - Use PHP MyAdmin, MySQL monitor (from terminal/console) or any other SQL front-end to import/execute the scripts contents.
+   
+   

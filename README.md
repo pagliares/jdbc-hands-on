@@ -19,4 +19,20 @@ SQL script used to create and populate the tables in the MySQL database (See SQL
    - SQL_Scripts/Hostel_App_SQL_Script.sql
    - Use PHP MyAdmin, MySQL monitor (from terminal/console) or any other SQL front-end to import/execute the scripts contents.
    
+# MySQL Connector/J
+
+To configure the JDBC Driver for MySQL (Connector/J) on Maven, include the following lines on the dependencies section of pom.xml (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
+
+     <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.30</version>
+    </dependency>
+
+To configure the JDBC Driver for MySQL (Connector/J) on Gradel, include the following lines on dependencies section of the build.gradle (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
+
+implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+
+ 
+
    

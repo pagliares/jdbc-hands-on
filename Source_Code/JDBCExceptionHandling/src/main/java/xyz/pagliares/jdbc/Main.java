@@ -17,7 +17,7 @@ public class Main {
 			System.out.println("Number of rows returned: " + rs.getRow());
 
 		} catch (SQLException e) {
-			System.err.println(e);
+			DatabaseUtility.processException(e);
 		}
 	}
 }

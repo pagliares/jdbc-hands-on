@@ -50,5 +50,7 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - This example project builds upon the previous example, adding a simple SELECT query to the database.
    - The simple SELECT query returns the number of rows of the admin table of the hostelapp_jdbc database.
 
-
+05 - DatabaseConnectionEncapsulation
+   - This example project builds upon the previous example, refactoring it in order to encapsulate the data needed to connect to a database.
+   - After this refactoring, it will be easier to evolve the code to support additional RDBMs
    

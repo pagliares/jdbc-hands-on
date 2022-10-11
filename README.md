@@ -46,8 +46,9 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 03 - MySQLConnectionTestJDBCDriverWithGradle
    - Same as previous project, but with Gradle build tool instead of Maven.
    
-   
-
+04 - SQLSelectQueryExample
+   - This example project builds upon the previous example, adding a simple SELECT query to the database.
+   - The simple SELECT query returns the number of rows of the admin table of the hostelapp_jdbc database.
 
 
    

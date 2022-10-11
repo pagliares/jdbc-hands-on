@@ -55,7 +55,7 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - After this refactoring, it will be easier to evolve the code to support additional RDBMs
 
 06 - JDBCExceptionHandling
-   - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resoursces feature of Java SE.
+   - This example project builds upon the previous example, encapsulating the JDBC error handling in an utilitary classs.
 
 07 - Java7TryWithResources
    - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resoursces feature of Java SE.

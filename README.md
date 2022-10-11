@@ -33,6 +33,21 @@ To configure the JDBC Driver for MySQL (Connector/J) on Gradel, include the foll
 
 implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 
- 
+
+# Examples
+
+01 - MySQLConnectionTestJDBCDriverWithoutBuildTool 
+   - This example project shows how to connect to a MySQL database without using a build tool to include de JDBC Driver for MySQL known as Connector/J 
+   - The  JDBC driver is included by placing the Connector/J in the souce path of the project (lib folder in the example).
+
+02 - MySQLConnectionTestJDBCDriverWithMaven
+    - This example project, as the previous project, shows how to connect to a MySQL database, but this time using a build tool (Maven) including de JDBC Driver for MySQL known as Connector/J in the project (configuring the dependency on the pom.xml file and not including in on the lib folder of the project.
+    
+03 - MySQLConnectionTestJDBCDriverWithGradle
+   - Same as previous project, but with Gradle build tool instead of Maven.
+   
+   
+
+
 
    

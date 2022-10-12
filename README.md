@@ -82,3 +82,8 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - This example project illustrates one way to limit the number or results (rows) in a resultset: method setMaxRows(int rows)
    - The example use a JDBC API approach and has some drawbacks (Next example will illustrate a better solution based on SQL only).
    - This solution has a poor performance, since the query returns all rows that are then filter it, discading additional rows.
+
+11 - LimitedRowsResultSetBetterSolution
+   - This example project illustrates one way to limit the number or results (rows) in a resultset using the LIMIT clause in SQL
+   - This solution is better than the one provided in the LimitedRowsResultSetBadSolution since it has better performance
+   - This solution also does not has problems with try with resources feature of Java SE

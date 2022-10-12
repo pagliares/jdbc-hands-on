@@ -59,4 +59,10 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 
 07 - Java7TryWithResources
    - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resoursces feature of Java SE.
+
+08 - ResultSetNavigation
+   - This example project builds upon the previous example, creating a utility class (Guests) with a static method (Guests.displayData(ResultSet)) that prints to the console details of the GUEST table in the database.
+   - The example demonstrates the use of the method next (responsible to move forward a ResultSet cursor)
+   - The example also demonstrates the methods rs.getInt(String columnName), rs.getString(String columnName) of an object ResultSet  
+   - The example also illustrates how to concatenate strings with StringBuffer (to avoid creating a new String objec on each concatenation)
    

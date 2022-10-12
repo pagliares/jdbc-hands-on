@@ -66,3 +66,15 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - The example also demonstrates the methods rs.getInt(String columnName), rs.getString(String columnName) of an object ResultSet  
    - The example also illustrates how to concatenate strings with StringBuffer (to avoid creating a new String objec on each concatenation)
    
+09 - ScrollableResultSet
+   - This example project demonstrates several ResultSet methods that moves the cursor between elements in the ResultSet
+   - Methods discussed: rs.last(), rs.first(), rs.absolute(int row), rs.getRow();
+   - The example demonstrates two ways to get an objetc Statement: 			 
+   
+    1. Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    
+    2. Statement stmt = conn.createStatement();
+    
+   - The first option creates a scrollable ResultSet. 
+   - The second option is RDBMS specific. In case of MySQL it returns a forward only ResultSet.
+

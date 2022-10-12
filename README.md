@@ -78,3 +78,7 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - The first option creates a scrollable ResultSet. 
    - The second option is RDBMS specific. In case of MySQL it returns a forward only ResultSet.
 
+10 - LimitedRowsResultSetBadSolution
+   - This example project illustrates one way to limit the number or results (rows) in a resultset: method setMaxRows(int rows)
+   - The example use a JDBC API approach and has some drawbacks (Next example will illustrate a better solution based on SQL only).
+   - This solution has a poor performance, since the query returns all rows that are then filter it, discading additional rows.

@@ -104,3 +104,9 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
     BigDecimal price 	= rs.getObject("price", BigDecimal.class);  
     
    - For RDBMS portability reasons, I suggest using BigDecimal instead of Double or Float as the second parameter of the getObject method.
+
+14 - JavaBeans
+   - This example project demonstrates the good practice of creating a JavaBean class for each database table.
+   - In this example, a JavaBean named Admin is created with instance variables reflecting the column names in the ADMIN table.
+   - A class named AdminController is used to show the detais of all admins stored in the ADMIN table as wel to allow retrieving only one single Admin by its ADMIN_ID.
+   - The example includes some improvements in the KeyboardInput utility class to ease the task of reading integer and float pointing input from the command prompt. 

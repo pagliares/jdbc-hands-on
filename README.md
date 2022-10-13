@@ -110,3 +110,15 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - In this example, a JavaBean named Admin is created with instance variables reflecting the column names in the ADMIN table.
    - A class named AdminController is used to show the detais of all admins stored in the ADMIN table as wel to allow retrieving only one single Admin by its ADMIN_ID.
    - The example includes some improvements in the KeyboardInput utility class to ease the task of reading integer and float pointing input from the command prompt. 
+
+15 - JavaBeanCreationSQLInsertPreparedStatement
+   - This example project starts with a new method, insert(Admin admin),on the AdminControler class 
+
+   - The insert method uses Statement.RETURN_GENERATED_KEYS when creating the prepared statement. For some RDBMSs this is automatic. For others, it is not.
+   
+                       PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+               
+   - The example also demonstrates how to grab the primary key generated just after executing the method stmt.executeUpdate().
+   
+   - The example demonstrates how to create an Admin bean and persisting it to the database.
+

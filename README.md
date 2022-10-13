@@ -86,4 +86,8 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 11 - LimitedRowsResultSetBetterSolution
    - This example project illustrates one way to limit the number or results (rows) in a resultset using the LIMIT clause in SQL
    - This solution is better than the one provided in the LimitedRowsResultSetBadSolution since it has better performance
-   - This solution also does not has problems with try with resources feature of Java SE
+   - This solution also does not has problems with try with resources feature of Java SE.
+
+12 - PreparedStatement
+   - This example project demonstrates how we can use SQL queries with parameters filtering the results returned by the database engine.
+   - It demonstrates, for instance, how to retrivev the Guests who lives in the California state - CA.

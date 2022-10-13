@@ -122,3 +122,10 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    
    - The example demonstrates how to create an Admin bean and persisting it to the database.
 
+16 -  JavaBeanUpdateSQLUpdatePreparedStatement
+   - This example project demonstrates how to update data of an existing tuple in a table from data of a bean passed as argument to the method update(Admin bean) in the class AdminController
+   - The example uses a PreparedStatement:
+   
+                  String sql = "UPDATE ADMIN SET USERNAME = ?, PASSWORD = ? WHERE ADMIN_ID = ?";
+   
+   

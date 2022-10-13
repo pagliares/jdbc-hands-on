@@ -91,3 +91,16 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 12 - PreparedStatement
    - This example project demonstrates how we can use SQL queries with parameters filtering the results returned by the database engine.
    - It demonstrates, for instance, how to retrivev the Guests who lives in the California state - CA.
+   
+13 - ResultSetGetObjectWithGenerics
+   - This example project demonstrates an alternative way to retrieve values for a specifified column from a row within a result set by using the method getObject(String column name, <E>). For example calling rs.getObject("GUEST_ID", Integer.class) instead of rs.getInt("GUEST_ID");
+   
+   - Note: The example shown does not deal yet with decimal numbers (float and double for instance in Java). If you try to use:
+   
+     double price =  rs.getObject("price", Double.class);  
+   
+   and are getting the Exception java.math.BigDecimal cannot be cast to java.lang.Double, try changing to BigDecimal:
+  
+    BigDecimal price 	= rs.getObject("price", BigDecimal.class);  
+    
+   - For RDBMS portability reasons, I suggest using BigDecimal instead of Double or Float as the second parameter of the getObject method.

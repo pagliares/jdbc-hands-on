@@ -19,7 +19,7 @@ public class Guests {
             while (rs.next()) {
                 StringBuffer buffer = new StringBuffer();
 
-                buffer.append("Guest ID......: " + rs.getObject("GUEST_ID", String.class) + "\n");
+                buffer.append("Guest ID......: " + rs.getObject("GUEST_ID", Integer.class) + "\n");
                 buffer.append("Full name.....: " + rs.getObject("FIRST_NAME", String.class) + " ");
                 buffer.append(rs.getObject("LAST_NAME", String.class) + "\n");
                 buffer.append("Email.........: " + rs.getObject("EMAIL_ADDRESS", String.class) + "\n");

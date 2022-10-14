@@ -169,3 +169,28 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - A good practice is to reuse opened connections
    - In Java SE single user enviromente, it is task of the developer to manges the database connections. In Jakarta EE, the app servers manage the connection by the use of Connection Pooling
    - This example project creates a ConnectionManager class as a Singleton design pattern to better manage database connections and refactor previous code to use this new ConnectionManager class.
+   
+20 - TransactionManagement
+   - This example project builds on a previous example to demonstrate how to use transactions with JDBC.
+   - A database transaction is one or more actions that make change do data in a RDBMS server or file.
+   - Insert, update and delete are examples of transactions.
+   - In JDBC transactions are auto-commited. The changes in your queries are committed immediately. 
+   - Most RDBMSs give you the ability to explicitly commit and rollback transactions
+        - In MySQL this depends on the engine being used.
+   - Open PHPMyadmin, and click on a table of the hostelapp_jdbc database and select Operations | Storage Engine |
+      - A list of engines is presented, included InnoDB
+      - InnoDB support transactions, foreign keys, etc.
+      - MyISAM is the default engine, but does not support transactions, for instance.
+   - To turn off auto commit of transactions in JDBC:
+
+			Connection connection = ConnectionManager.getInstance().getConnection();
+ 			connection.setAutoCommit(false);
+
+     - To commit the transaction (in case your have turned off auto-commit features:
+
+			connection.commit();
+
+     - If auto-commit is turned off and you have not explicitly called connection.commit(), you can roll back the transaction:
+
+			connection.rollback();  
+

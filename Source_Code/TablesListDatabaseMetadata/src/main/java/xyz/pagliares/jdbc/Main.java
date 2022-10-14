@@ -1,10 +1,8 @@
 package xyz.pagliares.jdbc;
 
-import xyz.pagliares.jdbc.beans.Admin;
-import xyz.pagliares.jdbc.tables.AdminController;
-import xyz.pagliares.jdbc.util.KeyboardInput;
-
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -12,6 +10,8 @@ public class Main {
 
         Connection conn = ConnectionManager.getInstance().getConnection();
         ResultSet rsTables = null;
+        ResultSet rsColumns = null;
+        List<String> tables = new ArrayList<>();
 
         try  {
 
@@ -23,7 +23,24 @@ public class Main {
             // rsTables = metadata.getTables(null, "%", "%", tableTypes);
 
             while (rsTables.next()) {
-                System.out.println(rsTables.getString("TABLE_NAME"));
+                tables.add(rsTables.getString("TABLE_NAME"));
+            }
+
+            for (String tableName : tables) {
+                System.out.println("Table: " + tableName);
+                System.out.println("_______");
+
+                rsColumns = metadata.getColumns(null, "%", tableName, "%");
+
+                while (rsColumns.next()) {
+                    StringBuffer buffer = new StringBuffer();
+                    buffer.append(rsColumns.getString("COLUMN_NAME"));
+                    buffer.append(": ");
+                    buffer.append(rsColumns.getString("TYPE_NAME"));
+                    System.out.println(buffer.toString());
+                }
+
+                System.out.println("");
             }
 
         } catch (Exception e) {
@@ -31,6 +48,7 @@ public class Main {
         }
         finally {
             rsTables.close();
+            rsColumns.close();
         }
 
         ConnectionManager.getInstance().close();

@@ -194,3 +194,13 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 
 			connection.rollback();  
 
+21 - TablesListDatabaseMetadata
+   - This example project shows how we can obtain metadata about the database
+   - In particular, we demonstrate how to get the name of the tables in the database using the following snippet of code:
+   
+   			DatabaseMetaData metadata = conn.getMetaData();
+			String[] tableTypes = {"TABLE"};
+			rsTables = metadata.getTables("hostelapp_jdbc", "%", "%", tableTypes);
+			while (rsTables.next()) {
+				System.out.println(rsTables.getString("TABLE_NAME"));
+			}

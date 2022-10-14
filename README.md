@@ -128,7 +128,7 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    
                   String sql = "UPDATE ADMIN SET USERNAME = ?, PASSWORD = ? WHERE ADMIN_ID = ?";
 
- 17 -  JavaBeanDeleteSQLDeletePreparedStatement
+ 17 - JavaBeanDeleteSQLDeletePreparedStatement
    - This example project demonstrates how to delete an existing tuple in a table based on the ADMIN_ID passed as argument to the method delete(int adminId)in the class AdminController
    - The example uses a PreparedStatement:
                String sql = "DELETE FROM ADMIN WHERE ADMIN_ID = ?";
@@ -142,3 +142,24 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
                } else {
 	               return false;
                }
+	      
+ 18 - UpdatableResultSet
+   - This examples demonstrates an alternative way to update data in a database by the use of UpdatableResultSet.
+   - In this example we need to pass the ResultSet.CONCUR_UPDATABLE constant argument when creating a Prepared Statement
+   
+   			PreparedStatement stmt = conn.prepareStatement(
+							sql, ResultSet.TYPE_SCROLL_INSENSITIVE,
+							ResultSet.CONCUR_UPDATABLE);
+
+   - The snippet of code needed to use an UpdatableResultSet:
+   
+   			rs = stmt.executeQuery();
+
+			if (rs.next()) {
+				rs.updateString("userName", bean.getUserName());
+				rs.updateString("password", bean.getPassword());
+				rs.updateRow();
+				return true;
+			} else {
+				return false;
+			}

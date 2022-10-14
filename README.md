@@ -163,3 +163,9 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 			} else {
 				return false;
 			}
+
+19 - PersistentDatabaseConnection
+   - This example project explains that the task of opening/closing database connections demands much time, memory and resources.
+   - A good practice is to reuse opened connections
+   - In Java SE single user enviromente, it is task of the developer to manges the database connections. In Jakarta EE, the app servers manage the connection by the use of Connection Pooling
+   - This example project creates a ConnectionManager class as a Singleton design pattern to better manage database connections and refactor previous code to use this new ConnectionManager class.

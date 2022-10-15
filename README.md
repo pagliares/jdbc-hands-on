@@ -1,6 +1,6 @@
 # JDBC hands-on
 
-Repository with source code of examples used in the JDBC course taught by Rodrigo Martins Pagliares at UNIFAL-MG.
+Repository with source code of examples used in the JDBC hands-on course taught by Rodrigo Martins Pagliares at UNIFAL-MG.
 
 ## MySQL
 
@@ -11,19 +11,19 @@ Repository with source code of examples used in the JDBC course taught by Rodrig
    - user: florentino
    - password: 123456
 
-In this hands-on, the  user florentino is created with aid of PHP MyAdmin that comes bundled with MAMP. The user florentino is granted all privileges a root user has. 
+In this hands-on, the  user florentino is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**. The user florentino is granted all privileges a root user has. 
 
 ### The database hostelapp_jdbc used in this course:
 
-In this hands-on, hhe database hostelapp_jdbc is created with aid of PHP MyAdmin that comes bundled with MAMP.
+In this hands-on, hhe database hostelapp_jdbc is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**.
 
-An SQL script is used to create and populate the tables in the MySQL database (See SQL_Scripts folder in this repository).
+An **SQL script** is used to create and populate the tables in the **MySQL database** (See SQL_Scripts folder in this repository).
    - SQL_Scripts/Hostel_App_SQL_Script.sql
-   - Use PHP MyAdmin, MySQL monitor (from terminal/console) or any other SQL front-end to import/execute the scripts contents.
+   - Use **PHP MyAdmin**, **MySQL monitor** (from terminal/console) or any other **SQL front-end** to import/execute the scripts contents.
    
 ### MySQL Connector/J
 
-To configure the JDBC Driver for MySQL (Connector/J) on Maven, include the following lines on the dependencies section of pom.xml (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
+To configure the **JDBC Driver for MySQL (Connector/J)** on **Apache Maven**, include the following lines on the dependencies section of pom.xml (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
 
      <dependency>
         <groupId>mysql</groupId>
@@ -31,7 +31,7 @@ To configure the JDBC Driver for MySQL (Connector/J) on Maven, include the follo
         <version>8.0.30</version>
     </dependency>
 
-To configure the JDBC Driver for MySQL (Connector/J) on Gradle, include the following lines on dependencies section of the build.gradle (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
+To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include the following line on the dependencies section of the build.gradle (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
 
 implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 

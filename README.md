@@ -2,24 +2,26 @@
 
 Repository with source code of examples used in the JDBC course taught by Rodrigo Martins Pagliares at UNIFAL-MG.
 
-# MySQL
+## MySQL
 
-MySQL database used in this course:
+### MySQL database used in this course:
    - hostelapp_jdbc
 
-MySQL credentials used in this course:
+### MySQL credentials used in this course:
    - user: florentino
    - password: 123456
 
-The user florentino was granted all privileges a root user has. 
+In this hands-on, the  user florentino is created with aid of PHP MyAdmin that comes bundled with MAMP. The user florentino is granted all privileges a root user has. 
 
-The database hostelapp_jdbc and user florentino were created with aid of PHP MyAdmin that comes bundled with MAMP.
+### The database hostelapp_jdbc used in this course:
 
-SQL script used to create and populate the tables in the MySQL database (See SQL_Scripts folder in this repository).
+In this hands-on, hhe database hostelapp_jdbc is created with aid of PHP MyAdmin that comes bundled with MAMP.
+
+An SQL script is used to create and populate the tables in the MySQL database (See SQL_Scripts folder in this repository).
    - SQL_Scripts/Hostel_App_SQL_Script.sql
    - Use PHP MyAdmin, MySQL monitor (from terminal/console) or any other SQL front-end to import/execute the scripts contents.
    
-# MySQL Connector/J
+### MySQL Connector/J
 
 To configure the JDBC Driver for MySQL (Connector/J) on Maven, include the following lines on the dependencies section of pom.xml (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
 
@@ -34,7 +36,7 @@ To configure the JDBC Driver for MySQL (Connector/J) on Gradle, include the foll
 implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 
 
-# Examples
+## Examples discussed in this hands-on
 
 01 - MySQLConnectionTestJDBCDriverWithoutBuildTool 
    - This example project shows how to connect to a MySQL database without using a build tool to include de JDBC Driver for MySQL known as Connector/J 

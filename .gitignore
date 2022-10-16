@@ -25,3 +25,4 @@ hs_err_pid*
 # Pagliares (target for Maven and build for Gradle)
 target/
 build/
+*.png

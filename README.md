@@ -42,7 +42,9 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
    - This example project shows how to connect to a MySQL database without using a build tool to include de JDBC Driver for MySQL known as Connector/J 
    - The  JDBC driver is included by placing the Connector/J in the source path of the project (lib folder in the example).
 
-![UML class Diagram](https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/01_Class_Diagram.png "UML class diagram")
+<p align="center">
+    <img width="238" height="127" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/01_Class_Diagram.png" alt="UML class diagram">
+</p>
 
 02 - MySQLConnectionTestJDBCDriverWithMaven
    - This example project, as the previous project, shows how to connect to a MySQL database, but this time using a build tool (Maven) including de JDBC Driver for MySQL known as Connector/J in the project (configuring the dependency on the pom.xml file and not including in on the lib folder of the project.

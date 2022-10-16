@@ -47,7 +47,16 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 </p>
 
 02 - MySQLConnectionTestJDBCDriverWithMaven
-   - This example project, as the previous project, shows how to connect to a MySQL database, but this time using a build tool (Maven) including de JDBC Driver for MySQL known as Connector/J in the project (configuring the dependency on the pom.xml file and not including in on the lib folder of the project.
+   - This example project is identical the previous project that shows how to connect to a MySQL database. The only difference is that this version uses a build tool (Maven). The JDBC Driver for MySQL known as Connector/J is included in the project (configuring the dependency on the pom.xml file and not including in on the lib folder of the project).
+   
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.30</version>
+    </dependency>
+    </dependencies>
     
 03 - MySQLConnectionTestJDBCDriverWithGradle
    - Same as previous project, but with Gradle build tool instead of Maven.

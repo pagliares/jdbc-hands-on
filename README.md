@@ -60,6 +60,10 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
     
 03 - MySQLConnectionTestJDBCDriverWithGradle
    - Same as previous project, but with Gradle build tool instead of Maven.
+
+`dependencies {
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+}`
    
 04 - SQLSelectQueryExample
    - This example project builds upon the previous example, adding a simple SELECT query to the database.

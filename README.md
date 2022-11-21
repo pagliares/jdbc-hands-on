@@ -33,7 +33,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Apache Maven**, in
 
 To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include the following line on the dependencies section of the build.gradle (Source: https://mvnrepository.com/artifact/mysql/mysql-connector-java):
 
-implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+<code>implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'</code>
 
 
 ## Examples discussed in this hands-on

@@ -15,7 +15,7 @@ In this hands-on, the  user florentino is created with aid of **PHP MyAdmin** th
 
 ### The database hostelapp_jdbc used in this course:
 
-In this hands-on, hhe database hostelapp_jdbc is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**.
+In this hands-on, the database hostelapp_jdbc is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**.
 
 An **SQL script** is used to create and populate the tables in the **MySQL database** (See SQL_Scripts folder in this repository).
    - SQL_Scripts/Hostel_App_SQL_Script.sql

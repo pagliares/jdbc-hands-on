@@ -94,7 +94,12 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 </p>
 
 06 - JDBCExceptionHandling
-   - This example project builds upon the previous example, encapsulating the JDBC error handling in an utilitary classs.
+   - This example project builds upon the previous example, encapsulating the JDBC error handling in an utilitary classs (method processException(SQLException e).
+
+<p align="center">
+    <img width="705" height="321" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_DIagram_JDBCExceptionHandling.png" alt="UML class diagram">
+</p>
+
 
 07 - Java7TryWithResources
    - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resoursces feature of Java SE.

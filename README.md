@@ -4,6 +4,21 @@ Repository with source code of examples used in the JDBC hands-on course taught 
 
 ## MySQL
 
+Before running the examples in this repository, make sure that:
+
+- You have started MySQL (the examples use the default port, 3306)
+- You have created a database called hostelapp_jdbc
+- You have created a MySQL user named florentino with password 123456
+
+If you decide to use other names for the database, user or another password, just remember to adjust the following constants in the examples:
+
+private static final String USERNAME = <strong>"florentino"</strong>;
+
+private static final String PASSWORD = <strong>"123456"</strong>;
+
+private static final String CONNECTION_STRING ="jdbc:mysql://localhost:<strong>3306/hostelapp_jdbc</strong>";
+
+
 ### MySQL database used in this course:
    - hostelapp_jdbc
 

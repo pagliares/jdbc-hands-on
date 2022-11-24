@@ -26,7 +26,7 @@ private static final String CONNECTION_STRING ="jdbc:mysql://localhost:<strong>3
    - user: florentino
    - password: 123456
 
-In this hands-on, the  user florentino is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**. The user florentino is granted all privileges a root user has. 
+In this hands-on, the  user florentino is created with aid of **PHP MyAdmin** that comes bundled with **MAMP**. The user florentino is granted all privileges a root user has (also with the aid of **PHP MyAdmin**). 
 
 ### The database hostelapp_jdbc used in this course:
 

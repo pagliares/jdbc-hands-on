@@ -87,7 +87,11 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 
 05 - DatabaseConnectionEncapsulation
    - This example project builds upon the previous example, refactoring it in order to encapsulate the data needed to connect to a database.
-   - After this refactoring, it will be easier to evolve the code to support additional RDBMs
+   - After this refactoring, it will be easier to evolve the code to support additional RDBMs.
+
+<p align="center">
+    <img width="710" height="424" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_DatabaseConnectionEncapsulation.png" alt="UML class diagram">
+</p>
 
 06 - JDBCExceptionHandling
    - This example project builds upon the previous example, encapsulating the JDBC error handling in an utilitary classs.

@@ -2,6 +2,14 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'xyz.pagliares.jdbc.Main'
+        )
+    }
+}
+
 group 'xyz.pagliares'
 version '1.0-SNAPSHOT'
 

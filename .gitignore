@@ -29,7 +29,7 @@ target/
 
 build/
 
-*.png
+# *.png
 
 .gradle/
 

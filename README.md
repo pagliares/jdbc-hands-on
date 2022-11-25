@@ -150,7 +150,11 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 
    - The example uses the class PreparedStatement presented in JDBC API.
    - It demonstrates, for instance, how to retriveve the guests who lives in the California state - CA.
-   - The example also introduces a new class (KeyboardInput) that allows reading the state from the keyboar
+   - The example also introduces a new class (KeyboardInput) that allows reading the state from the keyboard.
+   
+   <p align="center">
+    <img width="746" height="374" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_PreparedStatement.png" alt="UML class diagram">
+</p>
    
 13 - ResultSetGetObjectWithGenerics
    - This example project demonstrates an alternative way to retrieve values for a specifified column from a row within a result set by using the method getObject(String column name, <E>). For example calling rs.getObject("GUEST_ID", Integer.class) instead of rs.getInt("GUEST_ID");

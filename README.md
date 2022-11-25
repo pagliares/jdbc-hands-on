@@ -102,7 +102,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 
 
 07 - Java7TryWithResources
-   - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resoursces feature of Java SE.
+   - This example project builds upon the previous example, refactoring it in order to create more readable and succint code by automatically closing JDBC resources with try with resources feature of Java SE.
 
 08 - ResultSetNavigation
    - This example project builds upon the previous example, creating a utility class (Guests) with a static method (Guests.displayData(ResultSet)) that prints to the console details of the GUEST table in the database.

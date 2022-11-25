@@ -278,7 +278,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 			connection.rollback();  
 
 21 - TablesListDatabaseMetadata
-   - This example project shows how we can obtain metadata about the database
+   - This example project shows how we can obtain metadata about the database.
    - In particular, we demonstrate how to get the name of the tables in the database using the following snippet of code:
    
    			DatabaseMetaData metadata = conn.getMetaData();
@@ -287,3 +287,4 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 			while (rsTables.next()) {
 				System.out.println(rsTables.getString("TABLE_NAME"));
 			}
+   - See code for details about getting column names and types.

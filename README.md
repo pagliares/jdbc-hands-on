@@ -136,8 +136,11 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - <strong>Drawback 3</strong>: hhis solution has a poor performance, since the query returns all rows that are then filter it, discading additional rows.
 
 11 - LimitedRowsResultSetBetterSolution
-   - This example project illustrates one way to limit the number or results (rows) in a resultset using the LIMIT clause in SQL
-   - This solution is better than the one provided in the LimitedRowsResultSetBadSolution since it has better performance
+   - This example project illustrates one way to limit the number or results (rows) in a resultset using the LIMIT clause in SQL.  
+   
+   <p align="center"><code>ResultSet rs = stmt.executeQuery("SELECT * FROM GUEST <strong>LIMIT 5, 3</strong>"); // 3 results, starting at 6 </code></p>
+   
+   - This solution is better than the one provided in the LimitedRowsResultSetBadSolution, since it has better performance.
    - This solution also does not has problems with try with resources feature of Java SE.
 
 12 - PreparedStatement

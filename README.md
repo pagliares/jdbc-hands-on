@@ -117,7 +117,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 09 - ScrollableResultSet
    - This example project demonstrates several ResultSet methods that moves the cursor between elements in the ResultSet
    - Methods discussed: rs.last(), rs.first(), rs.absolute(int row), rs.getRow();
-   - The example demonstrates two ways to get an objetc Statement: 			 
+   - The example demonstrates two ways to get an object Statement: 			 
    
     1. Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     
@@ -125,6 +125,8 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
     
    - The first option creates a scrollable ResultSet. 
    - The second option is RDBMS specific. In case of MySQL it returns a forward only ResultSet.
+   
+   <strong>Good practice</strong>: explicitly indicate a scrollable ResultSet with the constant ResultSet.TYPE_SCROLL_INSENSITIVE when creating a Statement
 
 10 - LimitedRowsResultSetBadSolution
    - This example project illustrates one way to limit the number or results (rows) in a resultset: method setMaxRows(int rows)

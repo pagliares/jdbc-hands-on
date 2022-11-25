@@ -256,20 +256,24 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - In JDBC transactions are auto-commited. The changes in your queries are committed immediately. 
    - Most RDBMSs give you the ability to explicitly commit and rollback transactions
         - In MySQL this depends on the engine being used.
-   - Open PHPMyadmin, and click on a table of the hostelapp_jdbc database and select Operations | Storage Engine |
-      - A list of engines is presented, included InnoDB
+   - Open PHPMyadmin, and click on a table of the hostelapp_jdbc database and select Operations | Storage Engine 
+      - A list of engines is presented, included <strong>InnoDB</strong>.
       - InnoDB support transactions, foreign keys, etc.
       - MyISAM is the default engine, but does not support transactions, for instance.
+      
+<p align="center">
+    <img width="432" height="389" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/PHP_My_Admin.png" alt="UML class diagram">      
+      
    - To turn off auto commit of transactions in JDBC:
 
 			Connection connection = ConnectionManager.getInstance().getConnection();
  			connection.setAutoCommit(false);
 
-     - To commit the transaction (in case your have turned off auto-commit features:
+   - To commit the transaction (in case your have turned off auto-commit features):
 
 			connection.commit();
 
-     - If auto-commit is turned off and you have not explicitly called connection.commit(), you can roll back the transaction:
+   - If auto-commit is turned off and you have not explicitly called connection.commit(), you can roll back the transaction:
 
 			connection.rollback();  
 

@@ -92,6 +92,35 @@ public class AdminController {
 		return true;
 	}
 
+	public static boolean update(Admin bean) throws Exception {
+
+		String sql = "UPDATE ADMIN SET " +
+				"USERNAME = ?, PASSWORD = ? " +
+				"WHERE ADMIN_ID = ?";
+		try (
+				Connection conn = DatabaseUtility.getConnection(RDBMS.MYSQL);
+				PreparedStatement stmt = conn.prepareStatement(sql);
+		){
+
+			stmt.setString(1, bean.getUserName());
+			stmt.setString(2, bean.getPassword());
+			stmt.setInt(3, bean.getAdminId());
+
+			int affected = stmt.executeUpdate();
+			if (affected == 1) {
+				return true;
+			} else {
+				return false;
+			}
+
+		}
+		catch(SQLException e) {
+			System.err.println(e);
+			return false;
+		}
+
+	}
+
 	public static boolean delete(int adminId) throws Exception {
 
 		String sql = "DELETE FROM ADMIN WHERE ADMIN_ID = ?";

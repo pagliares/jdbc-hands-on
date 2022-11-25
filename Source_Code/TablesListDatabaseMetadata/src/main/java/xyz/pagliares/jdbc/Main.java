@@ -19,7 +19,7 @@ public class Main {
             String[] tableTypes = {"TABLE"};
             rsTables = metadata.getTables("hostelapp_jdbc", "%", "%", tableTypes);
 
-            // Uncomment the line below if you want to list the tables of ALL databases you have permision
+            // Uncomment the line below if you want to list the tables of ALL databases you have permission
             // rsTables = metadata.getTables(null, "%", "%", tableTypes);
 
             while (rsTables.next()) {

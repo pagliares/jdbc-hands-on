@@ -179,15 +179,16 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
     <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeans.png" alt="UML class diagram">
 
 15 - JavaBeanCreationSQLInsertPreparedStatement
-   - This example project starts with a new method, insert(Admin admin),on the AdminControler class 
-
+   - This example project starts with a new method, insert(Admin admin),on the AdminControler class. 
    - The insert method uses Statement.RETURN_GENERATED_KEYS when creating the prepared statement. For some RDBMSs this is automatic. For others, it is not.
    
-                       PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+<p align="center"><code>PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</code></p>
                
    - The example also demonstrates how to grab the primary key generated just after executing the method stmt.executeUpdate().
-   
    - The example demonstrates how to create an Admin bean and persisting it to the database.
+   
+<p align="center">
+    <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanCreationSQLInsertPreparedStatement.png" alt="UML class diagram">
 
 16 -  JavaBeanUpdateSQLUpdatePreparedStatement
    - This example project demonstrates how to update data of an existing tuple in a table from data of a bean passed as argument to the method update(Admin bean) in the class AdminController

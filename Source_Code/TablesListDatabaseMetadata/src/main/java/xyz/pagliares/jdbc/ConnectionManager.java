@@ -61,10 +61,11 @@ public class ConnectionManager {
 	}
 
 	public void close() {
-		System.out.println("Closing connection");
+		System.out.println("Closing connection...");
 		try {
 			conn.close();
 			conn = null;
+			System.out.println("Connection closed");
 		} catch (Exception e) {
 		}
 	}

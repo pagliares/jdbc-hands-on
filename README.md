@@ -106,9 +106,13 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 
 08 - ResultSetNavigation
    - This example project builds upon the previous example, creating a utility class (Guests) with a static method (Guests.displayData(ResultSet)) that prints to the console details of the GUEST table in the database.
-   - The example demonstrates the use of the method next (responsible to move forward a ResultSet cursor)
-   - The example also demonstrates the methods rs.getInt(String columnName), rs.getString(String columnName) of an object ResultSet  
-   - The example also illustrates how to concatenate strings with StringBuffer (to avoid creating a new String objec on each concatenation)
+   - The example demonstrates the use of the method next (responsible to move forward a ResultSet cursor).
+   - The example also demonstrates the methods rs.getInt(String columnName), rs.getString(String columnName) of an object ResultSet.  
+   - The example also illustrates how to concatenate strings with StringBuffer (to avoid creating a new String object on each concatenation).
+
+<p align="center">
+    <img width="591" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_ResultSetNavigation.png" alt="UML class diagram">
+</p>
    
 09 - ScrollableResultSet
    - This example project demonstrates several ResultSet methods that moves the cursor between elements in the ResultSet

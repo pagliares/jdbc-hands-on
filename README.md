@@ -191,11 +191,14 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
     <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanCreationSQLInsertPreparedStatement.png" alt="UML class diagram">
 
 16 -  JavaBeanUpdateSQLUpdatePreparedStatement
-   - This example project demonstrates how to update data of an existing tuple in a table from data of a bean passed as argument to the method update(Admin bean) in the class AdminController
+   - This example project demonstrates how to update data of an existing tuple in a table from data of a bean passed as argument to the method update(Admin bean) in the class AdminController.
    - The example uses a PreparedStatement:
    
-                  String sql = "UPDATE ADMIN SET USERNAME = ?, PASSWORD = ? WHERE ADMIN_ID = ?";
+<p align="center"><code>String sql = "UPDATE ADMIN SET USERNAME = ?, PASSWORD = ? WHERE ADMIN_ID = ?";</code></p>
 
+<p align="center">
+    <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanUpdateSQLUpdatePreparedStatement.png" alt="UML class diagram">
+    
  17 - JavaBeanDeleteSQLDeletePreparedStatement
    - This example project demonstrates how to delete an existing tuple in a table based on the ADMIN_ID passed as argument to the method delete(int adminId)in the class AdminController
    - The example uses a PreparedStatement:

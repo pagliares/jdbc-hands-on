@@ -59,7 +59,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - The  JDBC driver is included by placing the Connector/J in the source path of the project (lib folder in the example).
 
 <p align="center">
-    <img width="238" height="127" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/01_Class_Diagram.png" alt="UML class diagram">
+    <img width="309" height="165" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/01_Class_Diagram.png" alt="UML class diagram">
 </p>
 
 02 - MySQLConnectionTestJDBCDriverWithMaven

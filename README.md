@@ -144,8 +144,13 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - This solution also does not has problems with try with resources feature of Java SE.
 
 12 - PreparedStatement
-   - This example project demonstrates how we can use SQL queries with parameters filtering the results returned by the database engine.
-   - It demonstrates, for instance, how to retrivev the Guests who lives in the California state - CA.
+   - This example project demonstrates how we can use SQL queries with parameters, filtering the results returned by the database engine.
+   
+      <p align="center"><code>private static final String SQL = "SELECT * FROM GUEST WHERE <strong>STATE = ?</strong>";</code></p>
+
+   - The example uses the class PreparedStatement presented in JDBC API.
+   - It demonstrates, for instance, how to retriveve the guests who lives in the California state - CA.
+   - The example also introduces a new class (KeyboardInput) that allows reading the state from the keyboar
    
 13 - ResultSetGetObjectWithGenerics
    - This example project demonstrates an alternative way to retrieve values for a specifified column from a row within a result set by using the method getObject(String column name, <E>). For example calling rs.getObject("GUEST_ID", Integer.class) instead of rs.getInt("GUEST_ID");

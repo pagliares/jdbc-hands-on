@@ -219,7 +219,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 <p align="center">
     <img width="927" height="404" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanDeleteSQLDeletePreparedStatement.png" alt="UML class diagram">
 	      
- 18 - UpdatableResultSet
+18 - UpdatableResultSet
    - This examples demonstrates an alternative way to update data in a database by the use of UpdatableResultSet (without using an UPDATE SQL statement).
    - In this example we need to pass the ResultSet.CONCUR_UPDATABLE constant argument when creating a PreparedStatement.
    
@@ -242,9 +242,12 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 
 19 - PersistentDatabaseConnection
    - This example project explains that the task of opening/closing database connections demands much time, memory and resources.
-   - A good practice is to reuse opened connections
-   - In Java SE single user enviromente, it is task of the developer to manges the database connections. In Jakarta EE, the app servers manage the connection by the use of Connection Pooling
+   - A good practice is to reuse opened connections.
+   - In Java SE single user enviroment, it is task of the developer to manage the database connections. In Jakarta EE, the app servers manage the connections by the use of Connection Pooling.
    - This example project creates a ConnectionManager class as a Singleton design pattern to better manage database connections and refactor previous code to use this new ConnectionManager class.
+   
+<p align="center">
+    <img width="804" height="530" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_ConnectionManager.png" alt="UML class diagram">
    
 20 - TransactionManagement
    - This example project builds on a previous example to demonstrate how to use transactions with JDBC.

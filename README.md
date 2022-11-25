@@ -202,7 +202,10 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
  17 - JavaBeanDeleteSQLDeletePreparedStatement
    - This example project demonstrates how to delete an existing tuple in a table based on the ADMIN_ID passed as argument to the method delete(int adminId)in the class AdminController
    - The example uses a PreparedStatement:
-               String sql = "DELETE FROM ADMIN WHERE ADMIN_ID = ?";
+   
+
+<p align="center"><code>String sql = "DELETE FROM ADMIN WHERE ADMIN_ID = ?";</code></p>
+	       
    - The prepared statement is filled with arguments:
    
                stmt.setInt(1, adminId);
@@ -212,7 +215,10 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 	               return true;
                } else {
 	               return false;
-               }
+               }	       
+	       
+<p align="center">
+    <img width="927" height="404" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanDeleteSQLDeletePreparedStatement.png" alt="UML class diagram">
 	      
  18 - UpdatableResultSet
    - This examples demonstrates an alternative way to update data in a database by the use of UpdatableResultSet.

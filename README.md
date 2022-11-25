@@ -170,10 +170,13 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - For RDBMS portability reasons, I suggest using BigDecimal instead of Double or Float as the second parameter of the getObject method.
 
 14 - JavaBeans
-   - This example project demonstrates the good practice of creating a JavaBean class for each database table.
+   - This example project demonstrates the good practice of creating a JavaBean classes for database tables.
    - In this example, a JavaBean named Admin is created with instance variables reflecting the column names in the ADMIN table.
-   - A class named AdminController is used to show the detais of all admins stored in the ADMIN table as wel to allow retrieving only one single Admin by its ADMIN_ID.
+   - A class named AdminController is used to show the detais of all admins stored in the ADMIN table as well as to allow retrieving only one single Admin by its ADMIN_ID.
    - The example includes some improvements in the KeyboardInput utility class to ease the task of reading integer and float pointing input from the command prompt. 
+   
+   <p align="center">
+    <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeans.png" alt="UML class diagram">
 
 15 - JavaBeanCreationSQLInsertPreparedStatement
    - This example project starts with a new method, insert(Admin admin),on the AdminControler class 

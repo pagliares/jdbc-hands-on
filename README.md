@@ -157,7 +157,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
 </p>
    
 13 - ResultSetGetObjectWithGenerics
-   - This example project demonstrates an alternative way to retrieve values for a specifified column from a row within a result set by using the method getObject(String column name, <E>). For example, calling rs.getObject("GUEST_ID", Integer.class) instead of rs.getInt("GUEST_ID");
+   - This example project demonstrates an alternative way to retrieve values for a specifified column from a row within a result set by using the method <strong>getObject(String column name, &lt;E&gt;)</strong>. For example, calling <strong>rs.getObject("GUEST_ID", Integer.class)</strong> instead of <strong>rs.getInt("GUEST_ID");</strong>
    
    - <strong>Note</strong>: The example shown does not deal yet with decimal numbers (float and double for instance in Java). If you, for instance, try to use:
    
@@ -200,7 +200,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
     <img width="684" height="379" src="https://github.com/pagliares/jdbc-hands-on/blob/main/UML_Diagrams/Class_Diagram_JavaBeanUpdateSQLUpdatePreparedStatement.png" alt="UML class diagram">
     
  17 - JavaBeanDeleteSQLDeletePreparedStatement
-   - This example project demonstrates how to delete an existing tuple in a table based on the ADMIN_ID passed as argument to the method delete(int adminId)in the class AdminController
+   - This example project demonstrates how to delete an existing tuple in a table based on the ADMIN_ID passed as argument to the method delete(int adminId) in the class AdminController
    - The example uses a PreparedStatement:
    
 <p align="center"><code>String sql = "DELETE FROM ADMIN WHERE ADMIN_ID = ?";</code></p>

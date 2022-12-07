@@ -133,7 +133,7 @@ To configure the **JDBC Driver for MySQL (Connector/J)** on **Gradle**, include 
    - The example use a JDBC API approach (not SQL specification) and has some drawbacks (Next example will illustrate a better solution based on SQL only).
    - <strong>Drawback 1</strong>: need to move ResultSet instantiation from try with resources to the try body
    - <strong>Drawback 2</strong>: need to include a finally block to close the ResultSet, without benefits provided by auto closing of the resource introduced in Java 7
-   - <strong>Drawback 3</strong>: hhis solution has a poor performance, since the query returns all rows that are then filter it, discading additional rows.
+   - <strong>Drawback 3</strong>: this solution has a poor performance, since the query returns all rows that are then filter it, discading additional rows.
 
 11 - LimitedRowsResultSetBetterSolution
    - This example project illustrates one way to limit the number or results (rows) in a resultset using the LIMIT clause in SQL.  
